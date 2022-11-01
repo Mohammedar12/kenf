@@ -2681,6 +2681,7 @@ input {
 }
 
 .checkout-details .addresses,
+.address,
 .new-address,
 .header {
   width: 100%;
@@ -2696,25 +2697,31 @@ input {
 
 .checkout-details .address-info,
 .checkout-details .address-info .box,
-.checkout-details .address-info .box .field {
+.checkout-details .address-info .box .field , 
+.profile .address-info,
+.profile .address-info .box , 
+.profile .address-info .box .field {
   display: flex;
   gap: 20px;
   font-size: 14px;
 }
 
-.checkout-details .address-info {
+.checkout-details .address-info, 
+.profile .address-info {
   flex-direction: column;
   margin-top: 20px;
 }
 
-.checkout-details .address-info .box .field {
+.checkout-details .address-info .box .field , 
+.profile .address-info .box .field {
   flex-direction: column;
   gap: 0;
   width: 100%;
   position: relative;
 }
 
-.checkout-details .address-info .box .field label {
+.checkout-details .address-info .box .field label , 
+.profile .address-info .box .field label {
   position: absolute;
   top: 6px;
   right: 10px;
@@ -2727,7 +2734,8 @@ input {
   -o-transition: var(--transition);
 }
 
-.checkout-details .address-info .box .field input {
+.checkout-details .address-info .box .field input , 
+.profile .address-info .box .field input {
   outline: 0;
   transition: var(--transition);
   padding: 5px 10px;
@@ -2744,11 +2752,13 @@ input {
   -o-transition: var(--transition);
 }
 
-.checkout-details .address-info .box .field input:focus {
+.checkout-details .address-info .box .field input:focus , 
+.profile .address-info .box .field input:focus {
   border: 3px solid #1f4369;
 }
 
-.checkout-details .address-info .box .field input:focus + label {
+.checkout-details .address-info .box .field input:focus + label , 
+.profile .address-info .box .field input:focus + label {
   top: -10px;
   background-color: #fff;
   color: var(--main-color);
@@ -2764,14 +2774,16 @@ input:-webkit-autofill:active {
   box-shadow: 0 0 0 30px white inset !important;
 }
 
-.checkout-details .address-info .box .field input:valid + label {
+.checkout-details .address-info .box .field input:valid + label , 
+.profile .address-info .box .field input:valid + label {
   top: -10px;
   background-color: #fff;
   opacity: 1;
   z-index: 1;
 }
 
-.checkout-details .address-info button {
+.checkout-details .address-info button , 
+.profile .address-info button {
   background-color: var(--main-color);
   color: #fff;
   border: none;
@@ -2785,19 +2797,22 @@ input:-webkit-autofill:active {
   -o-border-radius: 8px;
 }
 
-.checkout-details .payments .title {
+.checkout-details .payments .title ,
+.billing-info .payments .title {
   font-size: 20px;
   font-weight: bold;
   padding: 10px;
   margin-bottom: 30px;
 }
 
-.checkout-details .payments .payment_methods { 
+.checkout-details .payments .payment_methods,
+.billing-info .payments .payment_methods { 
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.checkout-details .payments .method {
+.checkout-details .payments .method,
+.billing-info .payments .method {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -2806,7 +2821,8 @@ input:-webkit-autofill:active {
   /* flex: 1; */
 }
 
-.checkout-details .payments .method button {
+.checkout-details .payments .method button ,
+.billing-info .payments .method button {
   border-radius: 1rem;
   padding: 7px;
   background-color: #e7cda5;
@@ -2825,19 +2841,23 @@ input:-webkit-autofill:active {
   -o-transition: var(--transition);
 }
 
-.checkout-details .payments .method button:focus {
+.checkout-details .payments .method button:focus,
+.billing-info .payments .method button:focus {
   box-shadow: 0 0 10px 0 #1f43695b;
 }
 
-.checkout-details .payments .mada-card button {
+.checkout-details .payments .mada-card button ,
+.billing-info .payments .mada-card button {
   height: 48px;
 }
 
-.checkout-details .payments .mada-card button svg {
+.checkout-details .payments .mada-card button ,
+.billing-info .payments .mada-card button svg {
   fill: #000;
 }
 
-.checkout-details .payments .apple-pay button {
+.checkout-details .payments .apple-pay button ,
+.billing-info .payments .apple-pay button {
   background-color: #000;
   color: #fff;
 }
@@ -2847,7 +2867,8 @@ input:-webkit-autofill:active {
   overflow: hidden;
 }
 
-.checkout-details .payments .inputs {
+.checkout-details .payments .inputs ,
+.billing-info .payments .inputs {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -2859,7 +2880,8 @@ input:-webkit-autofill:active {
   -o-transform: translateY(15px);
 }
 
-.checkout-details .payments .inputs input {
+.checkout-details .payments .inputs input ,
+.billing-info .payments .inputs input {
   border: 2px solid #1f4369;
   padding: 3px 6px;
   font-size: 15px;
@@ -2871,7 +2893,8 @@ input:-webkit-autofill:active {
   -o-border-radius: .4rem;
 }
 
-.checkout-details .payments .inputs .box input {
+.checkout-details .payments .inputs .box input ,
+.billing-info .payments .inputs .box input {
   width: 100%;
 }
 
@@ -3436,7 +3459,7 @@ footer .contact-us ul .media {
 }
 
 .profile .personal-info,
-.profile .address-info,
+.profile .address,
 .profile .payments {
   padding: 10px 30px;
   margin: 0 0 10px;
@@ -3446,41 +3469,6 @@ footer .contact-us ul .media {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-}
-
-.billing-info .payments .method {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.billing-info .payments .inputs {
-  display: flex;
-  align-items: center;
-}
-
-.billing-info .payments .inputs input {
-  border: 0;
-  border-radius: 0 !important;
-  border-bottom: 1px solid;
-  outline: 0;
-  padding: 3px 6px;
-  font-size: 15px;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  -ms-border-radius: 0 !important;
-  -o-border-radius: 0 !important;
-}
-
-.billing-info .payments .inputs input:nth-child(1) {
-  width: 40%;
-}
-.billing-info .payments .inputs input:nth-child(2) {
-  width: 21%;
-}
-.personal-info .payments .inputs input:nth-child(3) {
-  width: 21%;
 }
 
 .profile .save-data {
@@ -3517,30 +3505,5 @@ footer .contact-us ul .media {
 
   .profile .box input {
     width: 100%;
-  }
-
-  .profile .payments .inputs input:nth-child(1) {
-    width: 40%;
-  }
-  .profile .payments .inputs input:nth-child(2) {
-    width: 23%;
-  }
-  .profile .payments .inputs input:nth-child(3) {
-    width: 23%;
-  }
-}
-
-@media (max-width: 350px) {
-  .profile .payments .inputs input {
-    font-size: 13px;
-  }
-  .profile .payments .inputs input:nth-child(1) {
-    width: 43%;
-  }
-  .profile .payments .inputs input:nth-child(2) {
-    width: 24%;
-  }
-  .profile .payments .inputs input:nth-child(3) {
-    width: 24%;
   }
 }

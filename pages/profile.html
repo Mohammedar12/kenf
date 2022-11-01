@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icons -->
+    <link rel="stylesheet" href="../css/all.min.css">
+
+    <!-- noralize -->
+    <link rel="stylesheet" href="../css/normalize.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- intl Tel Input -->
+    <link rel="stylesheet" href="../build/css/intlTelInput.css" />
+
+    <!-- CSS Main -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Kenf</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container-fluid p-0">
+            <nav class="main-nav p-1">
+                <div class="container">
+                    <div class="top-nav position-relative d-flex justify-content-between align-items-center p-3 ">
+                        <div class="left-content col-md-5 col-4">
+                            <div class="left-content_container">
+
+                                <div class="bag-icon">
+                                    <a href="bag-shopping.html">
+                                        <i class="fa-solid fa-bag-shopping fa-1x p-md-2 p-sm-1"></i>
+                                    </a>
+                                </div>
+
+                                <div class="favorite-icon">
+                                    <a href="favorite.html">
+                                        <i class="fa-solid fa-heart fa-1x p-md-2 p-sm-1"></i>
+                                    </a>
+                                </div>
+
+                                <div class=" user position-relative">
+                                    <i class="fa-solid fa-user user-icon fa-1x p-md-2 p-sm-1"></i>
+                                    <ul class=" user-list flex-column position-absolute gap-2">
+                                        <li><button onclick="restAll()" type="button" class="btn shadow-none p-0"
+                                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</button>
+                                        </li>
+                                        <li><a href="">My profile</a></li>
+                                        <li><a href="orders.html">My orders</a></li>
+                                        <li><a href="">Logout</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="center-content col-md-2 col-4">
+                            <div class="center-content_container">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img class="img-fluid " src="../images/logo.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-content col-md-5 col-4">
+                            <div class="right-content_container">
+                                <div class="lang d-none d-md-flex align-items-center gap-1 pb-2 pt-2 position-relative">
+                                    <i class="fa-solid fa-globe fa-1x"></i> <span class="fw-bold ar ">AR</span>
+                                    <ul class="list-lang ">
+                                        <li class="ar active">AR</li>
+                                        <li class="en">EN</li>
+                                    </ul>
+                                </div>
+                                <div tabindex="0" class=" search-box d-flex align-items-center ">
+                                    <div tabindex="0" class=" search-box d-flex align-items-center ">
+                                        <i class="fa-solid fa-search fa-1x p-1"></i>
+                                        <input dir="rtl" class="search " type="search" name="" id=""
+                                            placeholder="search">
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <i class="menu-bar fa-solid fa-bars fa-1x  p-1"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- mobail menu -->
+        <div dir="rtl" class=" menu-mob accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class=" text-center accordion-header" id="flush-headingOne">
+                    <button class="group gold-group accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Gold
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <ul class="category-mob category-gold d-flex text-center flex-column gap-1 align-items-center pt-2">
+                        <h5 class="fw-bold"><a href="gold-gruop.html">Gold </a></h5>
+                        <div class="links d-flex gap-3 flex-column">
+                            <li><a href="category-page.html">Rings</a></li>
+                            <li><a href="category-page.html">Bracelets</a></li>
+                            <li><a href="category-page.html">Earrings</a></li>
+                            <li><a href="category-page.html">Necklaces </a></li>
+                            <li><a href="category-page.html">Chains</a></li>
+                            <li><a href="category-page.html">Anklets</a></li>
+                            <li><a href="category-page.html">Sets</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class=" text-center accordion-header" id="flush-headingThree">
+                    <button class="group gold-group accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Silver
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <ul class="category-mob category-gold d-flex text-center flex-column gap-1 align-items-center pt-2">
+                        <h5 class="fw-bold"><a href="silver-gruop.html">Silver</a></h5>
+                        <div class="links d-flex gap-3 flex-column">
+                            <li><a href="category-page.html">Rings</a></li>
+                            <li><a href="category-page.html">Bracelets</a></li>
+                            <li><a href="category-page.html">Earrings</a></li>
+                            <li><a href="category-page.html">Necklaces </a></li>
+                            <li><a href="category-page.html">Chains</a></li>
+                            <li><a href="category-page.html">Anklets</a></li>
+                            <li><a href="category-page.html">Sets</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class=" text-center accordion-header" id="flush-headingTow">
+                    <button class="group gold-group accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTow" aria-expanded="false" aria-controls="flush-collapseTow">
+                        Diamonds
+                    </button>
+                </h2>
+                <div id="flush-collapseTow" class="accordion-collapse collapse" aria-labelledby="flush-headingTow"
+                    data-bs-parent="#accordionFlushExample">
+                    <ul class="category-mob category-gold d-flex text-center flex-column gap-1 align-items-center pt-2">
+                        <h5 class="fw-bold"><a href="daimond-gruop.html">Diamonds</a></h5>
+                        <div class="links d-flex gap-3 flex-column">
+                            <li><a href="category-page.html">Rings</a></li>
+                            <li><a href="category-page.html">Bracelets</a></li>
+                            <li><a href="category-page.html">Earrings</a></li>
+                            <li><a href="category-page.html">Necklaces </a></li>
+                            <li><a href="category-page.html">Chains</a></li>
+                            <li><a href="category-page.html">Anklets</a></li>
+                            <li><a href="category-page.html">Sets</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item lang-mob">
+                <h2 class=" text-center accordion-header " id="flush-headingLang">
+                    <button class="group gold-group accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseLang" aria-expanded="false" aria-controls="flush-collapseLang">
+                        <i class="fa-solid fa-globe"></i> <span class="fw-bold ar ">AR</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseLang" class=" list-lang accordion-collapse collapse"
+                    aria-labelledby="flush-headingLang" data-bs-parent="#accordionFlushExample">
+                    <ul class="list-lang d-flex m-0 p-0 flex-column gap-1 align-items-center">
+                        <li class="ar active">AR</li>
+                        <li class="en">EN</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav class="btm-nav d-flex justify-content-center p-2 mt-1">
+            <div class="container d-flex justify-content-center">
+                <ul class=" desktop-list d-flex align-items-center gap-5 fw-bold m-0 position-relative p-0">
+                    <div class="groups ps-2 pe-2">
+                        <li class="group gold-group"><a href="gold-gruop.html">Gold</a></li>
+                        <ul class="category category-gold d-flex text-center flex-column gap-1 align-items-center pt-2">
+                            <h5 class="fw-bold">Gold</h5>
+                            <div class="links d-flex gap-3">
+                                <li><a href="category-page.html">Rings</a></li>
+                                <li><a href="category-page.html">Bracelets</a></li>
+                                <li><a href="category-page.html">Earrings</a></li>
+                                <li><a href="category-page.html">Necklaces </a></li>
+                                <li><a href="category-page.html">Chains</a></li>
+                                <li><a href="category-page.html">Anklets</a></li>
+                                <li><a href="category-page.html">Sets</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="groups ps-2 pe-2">
+                        <li class="group silver-group"><a href="silver-gruop.html">Silver</a></li>
+                        <ul class="category category-silver d-flex flex-column gap-1 align-items-center pt-2">
+                            <h5 class="fw-bold">Silver</h5>
+                            <div class="links d-flex gap-3">
+                                <li><a href="category-page.html">Rings</a></li>
+                                <li><a href="category-page.html">Bracelets</a></li>
+                                <li><a href="category-page.html">Earrings</a></li>
+                                <li><a href="category-page.html">Necklaces </a></li>
+                                <li><a href="category-page.html">Chains</a></li>
+                                <li><a href="category-page.html">Anklets</a></li>
+                                <li><a href="category-page.html">Sets</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="groups ps-2 pe-2">
+                        <li class="group daimond-group"><a href="daimond-gruop.html">Diamonds</a></li>
+                        <ul class="category category-daimond d-flex flex-column gap-1 align-items-center pt-2">
+                            <h5 class="fw-bold">Diamonds</h5>
+                            <div class="links d-flex gap-3">
+                                <li><a href="category-page.html">Rings</a></li>
+                                <li><a href="category-page.html">Bracelets</a></li>
+                                <li><a href="category-page.html">Earrings</a></li>
+                                <li><a href="category-page.html">Necklaces </a></li>
+                                <li><a href="category-page.html">Chains</a></li>
+                                <li><a href="category-page.html">Anklets</a></li>
+                                <li><a href="category-page.html">Sets</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <!-- Modal Login -->
+        <div class="login-modal modal fade " id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered m-auto">
+                <div class="modal-content">
+                    <div class="modal-header align-items-start border-0 pb-0">
+                        <h5 class="modal-titled d-flex flex-column  align-items-center text-center w-100"
+                            id="staticBackdropLabel">
+                            <img class="m-3" src="../images/logo-3.svg" alt="" width="100px">
+                            <!-- Log in -->
+                        </h5>
+                    </div>
+                    <div class="modal-body border-0 p-0 pb-3">
+
+                        <!-- this will show before select the way -->
+                        <span class="login-title text-center d-block">Choese Way To login</span>
+
+                        <!-- email way -->
+                        <form action="" class="field-email d-none">
+                            <!-- Email input -->
+                            <div
+                                class="email-input d-flex flex-column align-items-end pe-3 ps-3  m-2 position-relative">
+                                <label for="email">* Email</label>
+                                <input dir="rtl" class="w-100 ps-5 pe-2 p-1 mt-1 rounded-1" type="text" id="email"
+                                    placeholder="Email" required style="border:1px solid #ccc ;">
+                                <i class="fa-solid fa-envelope p-1 position-absolute"
+                                    style="top: 33.3px; left: 20px;"></i>
+                            </div>
+
+                            <!-- verification input -->
+
+                            <div class="verification-email d-flex flex-column
+                             align-items-end pe-3 ps-3 m-2 position-relative d-none">
+                                <label for="email">* Verification code</label>
+                                <input dir="rtl" class="w-100 ps-5 pe-2 p-1 mt-1" type="text" id="email"
+                                    placeholder="Enter verification code" maxlength="4" required
+                                    style="border:1px solid #ccc ;">
+                            </div>
+
+                            <!-- submit -->
+
+                            <div class="submit w-100  text-center pe-4 ps-4">
+                                <button type="button" class="btn  w-100 shadow-none text-light mt-2"
+                                    style="background-color: var(--main-color) ;" onclick="showEmailCode()">
+                                    Go</button>
+                            </div>
+                        </form>
+
+                        <!-- phone way -->
+                        <form action="" class="field-phone d-none">
+
+                            <!-- Phone input -->
+
+                            <div
+                                class="phone-input d-flex flex-column align-items-end pe-3 ps-3  m-2 position-relative">
+                                <label for="">* phone</label>
+                                <input type="tel" name="" id="phone" class="w-100 ps-5 pe-2 p-1 mt-1 rounded-1" required
+                                    style="border:1px solid #ccc ;">
+                                <!-- <input type="tel" name="" id="phone" class="w-100 ps-5 pe-2 p-1 mt-1 rounded-1" required
+                                    style="border:1px solid #ccc ;"> -->
+                                <!-- <i class="fa-solid fa-mobile p-1 position-absolute"
+                                    style="top: 33.3px; left: 20px;"></i> -->
+                            </div>
+
+                            <!-- verification input -->
+
+                            <div class="verification-phone d-flex flex-column
+                             align-items-end pe-3 ps-3 m-2 position-relative d-none">
+                                <label for="phone">* Verification code</label>
+                                <input dir="rtl" class="w-100 ps-5 pe-2 p-1 mt-1" type="text" id="phone"
+                                    placeholder="Enter verification code" maxlength="4" required
+                                    style="border:1px solid #ccc ;">
+                            </div>
+
+                            <!-- submit -->
+
+                            <div class="submit w-100  text-center pe-4 ps-4">
+                                <button type="button" class="btn  w-100 shadow-none text-light mt-2"
+                                    style="background-color: var(--main-color) ;" onclick="showPhoneCode()">
+                                    Go</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-center ">
+                        <button type="button" class="btn email" onclick="showEmail()">
+                            Email
+                            <i class="fa-solid fa-envelope p-1"></i>
+                        </button>
+                        <button type="button" class="btn phone" onclick="showPhone()">
+                            Phone
+                            <i class=" fa-solid fa-mobile p-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="profile">
+        <div class="page-title">My Profile</div>
+        <div class="container" dir="rtl">
+            <div class="content_one">
+                <div class="personal-info">
+                    <div class="title">Personal Info</div>
+                    <div class="box">
+                        <div class="field">
+                            <input type="text" required>
+                            <label for="">Full Name</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" required>
+                            <label for="">Phone number</label>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <div class="field">
+                            <input type="email" required>
+                            <label for="">Email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="billing-info">
+                    <div class="payments" dir="auto">
+                        <div class="title">Payment Method</div>
+                        <div class="payment_methods d-flex">
+                            <div class="method credit-card" id="credit-card">
+                                <button id="credit_btn">
+                                    <img src="../images/294654_visa_icon.png" alt="" width="35px">
+                                    <img src="../images/MasterCard_early_1990s_logo.svg" alt="" width="35px">
+                                </button>
+                            </div>
+                            <div class="method mada-card" id="mada-card">
+                                <button id="mada_btn"><svg xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px"
+                                        y="0px" width="40px" viewBox="0 0 796.2 265.5"
+                                        style="enable-background:new 0 0 796.2 265.5;" xml:space="preserve">
+                                        <style type="text/css">
+                                            .st0 {
+                                                fill: #84B740;
+                                            }
+
+                                            .st1 {
+                                                fill: #259BD6;
+                                            }
+
+                                            .st2 {
+                                                fill: #27292D;
+                                            }
+                                        </style>
+
+                                        <rect y="153.1" class="st0" width="336.8" height="112.2" />
+                                        <rect class="st1" width="336.8" height="112.3" />
+                                        <path class="st2"
+                                            d="M673.6,242.5l-1.5,0.3c-5.2,1-7.1,1.4-10.9,1.4c-8.8,0-19.2-4.5-19.2-25.7c0-10.9,1.8-25.4,18.2-25.4h0.1   c2.8,0.2,6,0.5,12,2.3l1.3,0.4L673.6,242.5L673.6,242.5z M676.3,136.8l-2.7,0.5v39.2l-2.4-0.7l-0.7-0.2c-2.7-0.8-8.9-2.6-14.9-2.6   c-32.8,0-39.7,24.8-39.7,45.6c0,28.5,16,44.9,43.9,44.9c11.8,0,20.5-1.2,29.3-4.1c8.1-2.6,11-6.3,11-14.2V132.7   C692.3,134.1,684.2,135.5,676.3,136.8" />
+                                        <path class="st2"
+                                            d="M771.1,243.2l-1.4,0.4l-5,1.3c-4.7,1.2-8.9,1.9-12.1,1.9c-7.7,0-12.3-3.8-12.3-10.3c0-4.2,1.9-11.3,14.5-11.3   h16.3V243.2z M759.6,172.5c-10.1,0-20.5,1.8-33.4,5.8l-8.4,2.5l2.8,19l8.2-2.7c8.6-2.8,19.3-4.6,27.3-4.6c3.6,0,14.6,0,14.6,11.9   v5.2h-15.3c-27.9,0-40.8,8.9-40.8,28c0,16.3,11.9,26.1,31.9,26.1c6.2,0,14.8-1.2,22.2-3l0.4-0.1l0.4,0.1l2.5,0.4   c7.8,1.4,15.9,2.8,23.8,4.3V203C795.8,182.8,783.6,172.5,759.6,172.5" />
+                                        <path class="st2"
+                                            d="M576.8,243.2l-1.4,0.4l-5,1.3c-4.7,1.2-8.8,1.9-12.1,1.9c-7.7,0-12.3-3.8-12.3-10.3c0-4.2,1.9-11.3,14.4-11.3   h16.3L576.8,243.2L576.8,243.2z M565.4,172.5c-10.2,0-20.5,1.8-33.4,5.8l-8.4,2.5l2.8,19l8.2-2.7c8.6-2.8,19.3-4.6,27.3-4.6   c3.6,0,14.6,0,14.6,11.9v5.2h-15.3c-27.9,0-40.9,8.9-40.9,28c0,16.3,11.9,26.1,32,26.1c6.2,0,14.8-1.2,22.2-3l0.4-0.1l0.4,0.1   l2.4,0.4c7.9,1.4,15.9,2.8,23.8,4.4v-62.4C601.6,182.7,589.4,172.5,565.4,172.5" />
+                                        <path class="st2"
+                                            d="M471.5,172.7c-12.7,0-23.2,4.2-27.1,6l-1,0.5l-0.9-0.7c-5.4-3.9-13.3-5.9-24.3-5.9c-9.7,0-18.8,1.4-28.7,4.3   c-8.5,2.6-11.8,6.7-11.8,14.4v71.3h26.6v-65.9l1.3-0.4c5.4-1.8,8.6-2.1,11.7-2.1c7.7,0,11.6,4.1,11.6,12.1v56.4h26.2v-57.5   c0-3.4-0.7-5.4-0.8-5.8l-0.9-1.7l1.8-0.8c4-1.8,8.4-2.7,13-2.7c5.3,0,11.6,2.1,11.6,12.1v56.4h26.1v-59   C505.9,182.8,494.7,172.7,471.5,172.7" />
+                                        <path class="st2"
+                                            d="M751.5,73.2c-3.9,0-10.4-0.4-15.5-1.4l-1.5-0.3V33c0-3.2-0.6-5.2-0.7-5.5l-0.8-1.6l1.7-0.7   c0.4-0.2,0.8-0.3,1.3-0.5l0.3-0.2c0.6-0.2,1.2-0.4,1.8-0.6c0.3-0.1,0.5-0.2,0.7-0.2c5.9-1.6,11.3-1.4,13.7-1.6h0.1   c16.3,0,18.2,14.5,18.2,25.4C770.7,68.7,760.2,73.2,751.5,73.2 M751.4,0c-0.2,0-0.5,0-0.7,0c-15.3,0-31,4.2-36.6,12.4   c-3,4-4.7,9-4.8,14.9l0,0V67c0,3.4-0.7,4.7-0.8,5l-0.9,1.7h-48.3V46.1h-0.1C658.6,17,641.4,1,616.5,1h-2.9h-21.4   c-1,7.1-1.8,12.1-2.8,19.2h24.2c12.7,0,19.4,10.8,19.4,27.4v27.8l-1.7-0.9c-0.3-0.1-2.4-0.8-5.7-0.8h-41.8   c-0.8,5.3-1.8,12.2-2.9,19.1h128.5c4.4-0.9,9.5-1.7,13.9-2.4c6.5,3.2,18.6,4.9,26.9,4.9c27.9,0,46-18.7,46-47.5   C796.1,19.3,778.6,0.6,751.4,0" />
+                                        <path class="st2"
+                                            d="M526.1,104.5h1.2c27.9,0,40.9-9.2,40.9-31.9c0-16.3-11.9-29.3-31.9-29.3h-25.7c-7.7,0-12.3-4.4-12.3-11.8   c0-5,1.9-11.2,14.5-11.2H569c1.2-7.3,1.8-11.9,2.9-19.2h-58.4c-27.2,0-40.9,11.4-40.9,30.4c0,18.8,11.9,28.6,31.9,28.6h25.7   c7.7,0,12.3,6.1,12.3,12.5c0,4.2-1.9,12.9-14.4,12.9h-4.3l-82.3-0.2l0,0h-15c-12.7,0-21.6-7.2-21.6-23.9V49.9   c0-17.4,6.9-28.2,21.6-28.2h24.4c1.1-7.4,1.8-12.1,2.8-19.1h-30.4h-2.9c-24.9,0-42.1,16.7-42.7,45.8l0,0v1.1v11.9   c0.6,29.1,17.8,43,42.7,43h2.9h21.4l44.6,0.1l0,0h26.6L526.1,104.5L526.1,104.5z" />
+                                    </svg></button>
+                            </div>
+                            
+                        </div>
+                        <div class="cards_inputs">
+                            <div class="inputs  d-none" id="credit_inpits">
+                                <input type="text" placeholder="card number">
+                                <div class="d-flex gap-2 box">
+                                    <input type="text" placeholder="MM/YY">
+                                    <input type="text" placeholder="CVV">
+                                </div>
+                            </div>
+                            <div class="inputs d-none" id="mada_inpits">
+                                <input type="text" placeholder="card number">
+                                <div class="d-flex gap-2 box">
+                                    <input type="text" placeholder="MM/YY">
+                                    <input type="text" placeholder="CVV">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content_two">
+                <div class="address">
+                    <div class="new-address" style=" overflow:hidden ;">
+                        <div class="header">
+                            <label for="">Add Address</label>
+                        </div>
+                        <div class="address-info" dir="auto">
+                            <div class="box">
+                                <div class="field">
+                                    <input type="text" required>
+                                    <label for="">Full Name</label>
+                                </div>
+                                <div class="field">
+                                    <input type="text" required>
+                                    <label for="">Phone number</label>
+                                </div>
+
+                            </div>
+                            <div class="box">
+                                <div class="field">
+                                    <input type="email" required>
+                                    <label for="">Email</label>
+                                </div>
+                                <div class="field">
+                                    <input type="text" required>
+                                    <label for="">Country</label>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="field">
+                                    <input type="text" required>
+                                    <label for="">City</label>
+                                </div>
+                                <div class="field">
+                                    <input type="text" required>
+                                    <label for="">Street</label>
+                                </div>
+                            </div>
+                            <div class="check d-flex gap-1">
+                                <input type="checkbox" id="checkbox" onclick="checkedBox()" checked>
+                                <label for="checkbox">Payment and shipping address are the same</label>
+                            </div>
+                            
+                        </div>
+                        <div class="billing-address" style="height: 0;">
+                            <div class="header">
+                                <!-- <input type="radio" name="a" id="addAddress"> -->
+                                <label for="">Billing Address</label>
+                            </div>
+                            <div class="address-info" dir="rtl">
+                                <div class="box">
+                                    <div class="field">
+                                        <input type="text" required>
+                                        <label for="">Full Name</label>
+                                    </div>
+                                    <div class="field">
+                                        <input type="text" required>
+                                        <label for="">Phone number</label>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="field">
+                                        <input type="email" required>
+                                        <label for="">Email</label>
+                                    </div>
+                                    <div class="field">
+                                        <input type="text" required>
+                                        <label for="">Country</label>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="field">
+                                        <input type="text" required>
+                                        <label for="">City</label>
+                                    </div>
+                                    <div class="field">
+                                        <input type="text" required>
+                                        <label for="">Street</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <button class="save-data">Save</button>
+    </section>
+
+    <footer>
+        <div class="top_footer container">
+            <div class="logo-footer">
+                <img src="../images/logo-2.svg" alt="logo">
+            </div>
+            <div class="contact-us">
+                <h4 class="footer-title">Contact Us</h4>
+                <ul>
+                    <div class="media ">
+                        <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    </div>
+                    <li>support@kenf.sa</li>
+                </ul>
+            </div>
+            <div class="important-links">
+                <h4 class="footer-title">Important Links</h4>
+                <ul>
+                    <li><a href="">Terms and Conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Shipping And Delivery</a></li>
+                    <li><a href="">Return And Exchange</a></li>
+                </ul>
+            </div>
+            <div class="may-interest-you">
+                <h4 class="footer-title">May Interest You</h4>
+                <ul>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="">My Account</a></li>
+                    <li><a href="bag-shopping.html">Shopping Bag</a></li>
+                    <li><a href="">Size Guide</a></li>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                    <li><a href="complaints.html">Complaints</a></li>
+                </ul>
+            </div>
+            <div class="us">
+                <h4 class="footer-title">About Us</h4>
+                <p>كنف منصة تجارة من اكبر المنصات بالشرق الاوسط </p>
+            </div>
+        </div>
+        <div class="bottom_footer ">
+            <div class="bottom_footer-container">
+                <div class="footer-content col-md-4 col-4">
+                    <div class="left-content">
+                        <div class="img">
+                            <img src="../images/payment.png" alt="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content col-md-3 col-4">
+                    <div class="center-content">
+                        <div class="copyright">
+                            <span dir="rtl">جميع الحقوق محفوظة لـ KENF 2022 <span>&copy;</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content col-md-4 col-4">
+                    <div class="right-content"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let cardInputs = document.querySelector(".cards_inputs");
+        let creditInpits = document.querySelector("#credit_inpits");
+        let creditBtn = document.querySelector("#credit_btn");
+        let madaInpits = document.querySelector("#mada_inpits");
+        let madaBtn = document.querySelector("#mada_btn");
+        let checkbox = document.querySelector("#checkbox");
+        let billingAddress = document.querySelector(".billing-address");
+        function checkedBox() {
+
+            if (checkbox.checked == false) {
+                billingAddress.style.height = "220px"
+
+            } else {
+                billingAddress.style.height = "0px"
+            }
+        }
+        madaBtn.addEventListener("click", () => {
+            cardInputs.classList.add("show")
+            madaInpits.classList.add("show-this-flex")
+            creditInpits.classList.remove("show-this-flex")
+        })
+        creditBtn.addEventListener("click", () => {
+            cardInputs.classList.add("show")
+            creditInpits.classList.add("show-this-flex")
+            madaInpits.classList.remove("show-this-flex")
+        })
+    </script>
+
+    <!-- icon script -->
+    <script src="../js/all.min.js"></script>
+
+    <!-- bootstrap script -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <!-- jquery script -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <!-- intlTelInput script -->
+    <script type="text/javascript" src="../build/js/intlTelInput.js"></script>
+
+    <!-- owl main script -->
+    <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+    <!-- owl script -->
+    <script src="../js/owlCarousel.js"></script>
+
+    <!-- main script -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
