@@ -114,17 +114,13 @@ inputUpload.addEventListener("change", function () {
   spanlInput.textContent = "change image";
 });
 
+
 // review tickets
 
 let review = document.querySelectorAll("#review");
 let ticketReview = document.querySelector(".ticket-review .ticket-modal");
 let backDrop = document.querySelector(".back-drop");
 let closeReview = document.querySelector(".ticket-review #close-review");
-
-// review.addEventListener("click", () => {
-//   console.log("d");
-//   ticketReview.style.display = "block";
-// });
 
 review.forEach((ticket) => {
   ticket.addEventListener("click", () => {
@@ -165,3 +161,6 @@ closeAnswered.addEventListener("click", () => {
   ticketAnswered.style.display = "none";
   backDrop.style.display = "none";
 });
+
+
+
