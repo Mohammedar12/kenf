@@ -331,10 +331,31 @@
         <div class="page-title">Checkout</div>
         <div class="container">
             <div class="checkout-info" dir="auto">
-                <select class="shipping-list form-select form-select-sm" aria-label=".form-select-lg example">
+                <div class="shipping-company">
+                    <div class="shipping-title fw-bold pb-1" style="border-bottom: 2px solid;">Shipping By : </div>
+                    <div class="shipping-list mt-3 gap-3 d-flex justify-content-between flex-column">
+                        <div class="company d-flex gap-2">
+                            <input type="radio" name="1" id="co_1">
+                            <label for="co_1">Samsa <sub style="padding: 0 5px;">20 SAR</sub></label>
+                        </div>
+                        <div class="company d-flex gap-2">
+                            <input type="radio" name="1" id="co_2">
+                            <label for="co_2">Fedex <sub style="padding: 0 5px;">25 SAR</sub></label>
+                        </div>
+                        <div class="company d-flex gap-2">
+                            <input type="radio" name="1" id="co_3">
+                            <label for="co_3">Dhl <sub style="padding: 0 5px;">17 SAR</sub></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- <select class="shipping-list form-select form-select-sm" aria-label=".form-select-lg example">
                     <option selected>Shipping</option>
                     <option value="1">Samsa</option>
-                </select>
+                </select> -->
+                <div class="discount-code">
+                    <button>Apply</button>
+                    <input type="text" placeholder="discount code " dir="rtl">
+                </div>
                 <div class="costs" dir="rtl">
                     <div class="total-bag">
                         <span>Total Shopping Bag :</span>
@@ -361,7 +382,6 @@
                     <button class="continue__btn">Checkout</button>
                 </div>
             </div>
-
             <div class="checkout-details">
                 <div class="addresses">
 
@@ -407,7 +427,13 @@
                                 </div>
                                 <div class="field">
                                     <input type="text" required>
-                                    <label for="">Street</label>
+                                    <label for="">Zip Code</label>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="field">
+                                    <input type="text" required>
+                                    <label for="">Streey</label>
                                 </div>
                             </div>
                             <div class="check d-flex gap-1">
@@ -450,7 +476,13 @@
                                     </div>
                                     <div class="field">
                                         <input type="text" required>
-                                        <label for="">Street</label>
+                                        <label for="">Zip Code</label>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="field">
+                                        <input type="text" required>
+                                        <label for="">Streey</label>
                                     </div>
                                 </div>
                             </div>
@@ -596,32 +628,25 @@
         let madaBtn = document.querySelector("#mada_btn");
         let checkbox = document.querySelector("#checkbox");
         let billingAddress = document.querySelector(".billing-address");
-
-
         function checkedBox() {
 
             if (checkbox.checked == false) {
-                billingAddress.style.height = "210px"
-                // console.log(checkbox)
+                billingAddress.style.height = "270px"
+
             } else {
                 billingAddress.style.height = "0px"
-                // console.log(checkbox + "hiiisa ")
             }
         }
-
         madaBtn.addEventListener("click", () => {
-            cardInputs.classList.add("show")
+            cardInputs.classList.add("show-input")
             madaInpits.classList.add("show-this-flex")
             creditInpits.classList.remove("show-this-flex")
         })
         creditBtn.addEventListener("click", () => {
-            cardInputs.classList.add("show")
+            cardInputs.classList.add("show-input")
             creditInpits.classList.add("show-this-flex")
             madaInpits.classList.remove("show-this-flex")
         })
-
-
-
     </script>
     <script src="../js/all.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
