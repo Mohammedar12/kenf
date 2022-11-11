@@ -2529,7 +2529,7 @@ input {
   height: 100%;
 }
 
-.order {
+.orders .order {
   width: 90%;
   padding: 10px 20px;
   margin: 20px auto;
@@ -2544,7 +2544,7 @@ input {
   -o-border-radius: 7px;
 }
 
-.order .order__number,
+.orders .order .order__number,
 .order__cost,
 .order__details,
 .order__info,
@@ -2555,17 +2555,17 @@ input {
   align-items: center;
 }
 
-.order .order__number {
+.orders .order .order__number {
   font-weight: bold;
 }
 
-.order__info {
+.orders .order__info {
   width: 70%;
   flex-direction: column;
   gap: 8px;
 }
 
-.order .order__details .invoice button {
+.orders .order .order__details .invoice button {
   background-color: var(--main-color);
   color: #fff;
   font-size: 14px;
@@ -2580,30 +2580,30 @@ input {
 }
 
 @media (max-width: 767px) {
-  .order .order__details {
+  .orders .order .order__details {
     flex-direction: column;
     gap: 10px;
   }
 
-  .order .order__details .order__info {
+  .orders .order .order__details .order__info {
     width: 100%;
   }
 
-  .order .order__details .invoice,
-  .order .order__details .invoice button {
+  .orders .order .order__details .invoice,
+  .orders .order .order__details .invoice button {
     width: 100%;
   }
 
-  .order .order__details .invoice button {
+  .orders .order .order__details .invoice button {
     margin-bottom: 5px;
   }
 }
 
 @media (max-width: 360px) {
-  .order {
+  .orders .order {
     font-size: 13px;
   }
-  .order .order__details .invoice button {
+  .orders .order .order__details .invoice button {
     font-size: 12px;
     padding: 2px;
   }
@@ -2631,7 +2631,8 @@ input {
   width: 30%;
 }
 
-.checkout .shipping-company {
+.checkout .shipping-company ,
+.checkout .checkout_ordedrs {
   padding: 15px 20px;
   background-position: left 0.75rem center !important;
   box-shadow: 0px 0px 10px 0px rgba(237, 221, 198, 0.5);
@@ -2644,7 +2645,11 @@ input {
 }
 
 .checkout .shipping-company .company {
-  position: relative;
+position: relative;
+font-size: 14px;
+}
+.checkout .checkout_ordedrs {
+    font-size: 13px;
 }
 
 .checkout .shipping-company .company::after {
@@ -2673,6 +2678,41 @@ input {
 
 .checkout .shipping-company .company input {
   accent-color: var(--main-color);
+}
+.checkout .checkout_ordedrs .ordedrs-list {
+  height: 251px;
+  overflow: auto;
+}
+
+.checkout .checkout_ordedrs .ordedrs-list::-webkit-scrollbar {
+  width: 3px;
+  background-color: #1f43695d;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.checkout .checkout_ordedrs .ordedrs-list::-webkit-scrollbar-thumb {
+  background-color: #101113;
+  border-radius: 10px;
+}
+
+.checkout .checkout_ordedrs .order {
+  border-bottom: 1px solid;
+}
+
+.checkout .checkout_ordedrs .order .order_img,
+.checkout .checkout_ordedrs .order .order_price{
+  width: 25%;
+}
+
+.checkout .checkout_ordedrs .order .order_img img {
+  max-width: 80px;
+}
+
+.checkout .checkout_ordedrs .order .order_title{
+  width: 50%;
 }
 
 .checkout .checkout-info .costs {
@@ -2706,7 +2746,7 @@ input {
 
 .checkout-details .new-address,
 .checkout-details .address-list,
-.checkout-details .payments {
+.checkout .payments {
   padding: 10px 30px;
   margin: 0 0 10px;
   border-radius: 10px;
@@ -2834,21 +2874,21 @@ input:-webkit-autofill:active {
   -o-border-radius: 8px;
 }
 
-.checkout-details .payments .title ,
+.checkout .payments .title ,
 .billing-info .payments .title {
   font-size: 20px;
   font-weight: bold;
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.checkout-details .payments .payment_methods,
+.checkout .payments .payment_methods,
 .billing-info .payments .payment_methods { 
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.checkout-details .payments .method,
+.checkout .payments .method,
 .billing-info .payments .method {
   display: flex;
   flex-direction: column;
@@ -2858,7 +2898,7 @@ input:-webkit-autofill:active {
   /* flex: 1; */
 }
 
-.checkout-details .payments .method button ,
+.checkout .payments .method button ,
 .billing-info .payments .method button {
   border-radius: 1rem;
   padding: 7px;
@@ -2878,22 +2918,22 @@ input:-webkit-autofill:active {
   -o-transition: var(--transition);
 }
 
-.checkout-details .payments .method button:focus,
+.checkout .payments .method button:focus,
 .billing-info .payments .method button:focus {
   box-shadow: 0 0 10px 0 #1f43695b;
 }
 
-.checkout-details .payments .mada-card button ,
+.checkout .payments .mada-card button ,
 .billing-info .payments .mada-card button {
   height: 48px;
 }
 
-.checkout-details .payments .mada-card button ,
+.checkout .payments .mada-card button ,
 .billing-info .payments .mada-card button svg {
   fill: #000;
 }
 
-.checkout-details .payments .apple-pay button ,
+.checkout .payments .apple-pay button ,
 .billing-info .payments .apple-pay button {
   background-color: #000;
   color: #fff;
@@ -2904,7 +2944,7 @@ input:-webkit-autofill:active {
   overflow: hidden;
 }
 
-.checkout-details .payments .inputs ,
+.checkout .payments .inputs ,
 .billing-info .payments .inputs {
   display: flex;
   flex-direction: column;
@@ -2917,7 +2957,7 @@ input:-webkit-autofill:active {
   -o-transform: translateY(15px);
 }
 
-.checkout-details .payments .inputs input ,
+.checkout .payments .inputs input ,
 .billing-info .payments .inputs input {
   border: 2px solid #1f4369;
   padding: 3px 6px;
@@ -2930,7 +2970,7 @@ input:-webkit-autofill:active {
   -o-border-radius: .4rem;
 }
 
-.checkout-details .payments .inputs .box input ,
+.checkout .payments .inputs .box input ,
 .billing-info .payments .inputs .box input {
   width: 100%;
 }
@@ -2939,11 +2979,27 @@ input:-webkit-autofill:active {
   height: 100px;
 }
 
+[data-payment="lg_screen"] {
+  display: block;
+}
+
+[data-payment="sm_screen"] {
+  display: none;
+}
 
 @media (max-width: 997px) {
   .checkout .container {
     flex-direction: column-reverse;
   }
+
+  [data-payment="lg_screen"] {
+    display: none;
+  }
+
+  [data-payment="sm_screen"] {
+    display: block;
+  }
+
   .checkout-details {
     width: 100%;
   }
